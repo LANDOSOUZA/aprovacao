@@ -1,1 +1,1 @@
-# aprovacao
+Instalar, usar e contribuir.
