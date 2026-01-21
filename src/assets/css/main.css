@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Ajustes globais personalizados */
+section {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--azul-escuro);
+}
+
+.router-link-active,
+.router-link-exact-active {
+  opacity: 1 !important;
+  color: var(--azul-escuro) !important;
+}
