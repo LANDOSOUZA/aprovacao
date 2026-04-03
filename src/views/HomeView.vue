@@ -10,7 +10,7 @@
         Atendimento 100% on-line, com orientação clara, preço justo e foco total em resolver o problema do empreendedor.
       </p>
       <a
-        href="https://wa.me/seu_numero"
+        href="https://wa.me/5519997070990"
         target="_blank"
         class="inline-block bg-green-600 text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"
       >
@@ -73,7 +73,7 @@
       </h2>
       <p>Entre em contato e receba orientação imediata.</p>
       <a
-        href="https://wa.me/5519991506801"
+        href="https://wa.me/5519997070990"
         target="_blank"
         class="inline-block bg-green-600 text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"
       >

@@ -16,7 +16,7 @@
 
     <div class="space-y-4">
       <a
-        href="https://wa.me/seu_numero"
+        href="https://wa.me/5519997070990"
         target="_blank"
         class="inline-block bg-[var(--verde-whatsapp)] text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"
       >

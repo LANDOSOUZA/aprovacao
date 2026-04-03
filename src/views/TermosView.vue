@@ -54,7 +54,7 @@
       <h2 class="text-xl font-bold mt-6 mb-2">8. Contato</h2>
       <p>
         Para dúvidas sobre estes Termos de Uso, entre em contato:<br />
-        <strong>contato@aprovacaoadministrativa.com.br</strong>
+        <strong>contato@aprovacaoadm.com.br</strong>
       </p>
 
     </Card>

@@ -11,7 +11,7 @@
       </p>
 
       <p class="text-sm text-gray-600">
-        contato@aprovacaoadministrativa.com.br
+        contato@aprovacaoadm.com.br
       </p>
 
       <div class="flex justify-center gap-6 text-sm mt-4">
