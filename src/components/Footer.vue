@@ -4,6 +4,8 @@
 
       <p class="text-xl font-semibold text-[var(--azul-escuro)]">
         Aprovação Administrativa
+        CNPJ: 66.052.603/0001-45
+        Campinas - SP
       </p>
 
       <p class="text-gray-700">
