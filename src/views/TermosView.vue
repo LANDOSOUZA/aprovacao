@@ -20,7 +20,7 @@
         <li>Organização documental</li>
         <li>Preenchimento de formulários</li>
         <li>Elaboração de defesas administrativas</li>
-        <li>Acompanhamento de processos junto à Vigilância Sanitária municipal</li>
+        <li>Acompanhamento de processos junto à Prefeitura e órgãos públicos municipais, incluindo Vigilância Sanitária</li>
       </ul>
       <p class="text-sm text-gray-600 italic mt-2">
         Não realizamos consultoria jurídica, representação legal ou serviços advocatícios.

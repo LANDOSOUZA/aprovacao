@@ -10,8 +10,11 @@
     <Card>
       <h2 class="text-xl font-bold mb-4">Quem somos</h2>
       <p>
-        A Aprovação Administrativa nasceu com o propósito de facilitar a vida do pequeno empreendedor que precisa lidar com processos administrativos junto à Vigilância Sanitária municipal.
-        Nosso foco é oferecer orientação clara, organização documental e suporte técnico para que cada cliente consiga regularizar seu negócio com tranquilidade e segurança.
+        A Aprovação Administrativa nasceu com o propósito de facilitar a vida do pequeno
+        empreendedor que precisa lidar com processos administrativos junto à Prefeitura
+        e órgãos públicos municipais, incluindo Vigilância Sanitária.
+        Nosso foco é oferecer orientação clara, organização documental e suporte técnico
+        para que cada cliente consiga regularizar seu negócio com tranquilidade e segurança.
       </p>
     </Card>
 
@@ -19,7 +22,8 @@
     <Card>
       <h2 class="text-xl font-bold mb-4">Nossa missão</h2>
       <p>
-        Ajudar empreendedores a superar a burocracia, oferecendo serviços administrativos acessíveis, eficientes e totalmente on-line.
+        Ajudar empreendedores a superar a burocracia, oferecendo serviços administrativos
+        acessíveis, eficientes e totalmente on-line.
       </p>
     </Card>
 
@@ -49,7 +53,11 @@
         <li>Suporte remoto</li>
       </ul>
       <p class="mt-4">
-        Todo o atendimento é realizado de forma 100% on-line, garantindo agilidade e praticidade para o cliente.
+        Todo o atendimento é realizado de forma 100% on-line, garantindo agilidade
+        e praticidade para o cliente.
+      </p>
+      <p class="text-xs text-gray-600 italic mt-2">
+        Atuação exclusivamente administrativa, sem prestação de serviços jurídicos.
       </p>
     </Card>
 
@@ -57,8 +65,10 @@
     <Card>
       <h2 class="text-xl font-bold mb-4">Por que existimos</h2>
       <p>
-        Sabemos que muitos empreendedores se sentem perdidos diante de exigências, prazos e documentos.
-        Nosso objetivo é simplificar esse caminho, oferecendo suporte técnico e administrativo para que cada cliente possa focar no que realmente importa: o próprio negócio.
+        Sabemos que muitos empreendedores se sentem perdidos diante de exigências, prazos
+        e documentos. Nosso objetivo é simplificar esse caminho, oferecendo suporte técnico
+        e administrativo para que cada cliente possa focar no que realmente importa:
+        o próprio negócio.
       </p>
     </Card>
 

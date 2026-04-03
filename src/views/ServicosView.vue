@@ -8,10 +8,14 @@
 
     <!-- Cadastro e Regularização -->
     <Card>
-      <h2 class="text-xl font-bold mb-4">Cadastro e Regularização na Vigilância Sanitária</h2>
+      <h2 class="text-xl font-bold mb-4">
+        Cadastro e Regularização Administrativa
+      </h2>
 
       <p>
-        Apoio administrativo completo para empreendedores que precisam realizar ou atualizar o cadastro sanitário do seu estabelecimento junto à Vigilância Sanitária municipal.
+        Apoio administrativo completo para empreendedores que precisam realizar ou
+        atualizar cadastros e regularizações junto à Prefeitura e órgãos públicos
+        municipais, incluindo Vigilância Sanitária.
       </p>
 
       <h3 class="font-semibold mt-4">Como funciona</h3>
@@ -20,7 +24,9 @@
         <li>Orientação sobre documentos necessários</li>
         <li>Preenchimento de formulários</li>
         <li>Organização e envio da documentação</li>
-        <li>Acompanhamento do processo até a aprovação</li>
+        <li>
+          Acompanhamento do processo até a conclusão da análise pelo órgão público
+        </li>
       </ul>
 
       <h3 class="font-semibold mt-4">Benefícios</h3>
@@ -44,15 +50,19 @@
 
     <!-- Defesa Administrativa -->
     <Card>
-      <h2 class="text-xl font-bold mb-4">Defesa Administrativa de Auto de Infração</h2>
+      <h2 class="text-xl font-bold mb-4">
+        Defesa Administrativa em Processos Administrativos
+      </h2>
 
       <p>
-        Elaboração de defesa administrativa para responder Autos de Infração emitidos pela Vigilância Sanitária municipal, com foco em organização documental e argumentação técnica.
+        Elaboração de defesa administrativa para responder notificações, exigências ou
+        Autos de Infração emitidos por órgãos públicos municipais, com foco em organização
+        documental e argumentação técnica.
       </p>
 
       <h3 class="font-semibold mt-4">Como funciona</h3>
       <ul class="list-disc pl-6 space-y-2 mt-2">
-        <li>Análise completa do Auto de Infração</li>
+        <li>Análise completa da notificação ou auto administrativo</li>
         <li>Identificação de inconsistências e pontos críticos</li>
         <li>Orientação sobre documentos complementares</li>
         <li>Elaboração da defesa administrativa</li>
@@ -78,7 +88,7 @@
           target="_blank"
           class="inline-block bg-green-600 text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"
         >
-          Enviar Auto de Infração
+          Solicitar defesa administrativa
         </a>
       </div>
     </Card>

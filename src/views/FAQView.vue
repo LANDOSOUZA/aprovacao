@@ -29,14 +29,14 @@
         <div>
           <h3 class="font-semibold">Vocês fazem defesa jurídica</h3>
           <p class="text-gray-700">
-            Não. Nossa atuação é exclusivamente administrativa, voltada à elaboração de defesas administrativas e organização documental.
+            Não. Nossa atuação é exclusivamente administrativa, voltada à organização documental e à elaboração de defesas administrativas, sem prestação de serviços jurídicos.
           </p>
         </div>
 
         <div>
           <h3 class="font-semibold">Quanto tempo leva para regularizar meu cadastro</h3>
           <p class="text-gray-700">
-            O prazo depende da demanda da Vigilância Sanitária do seu município. Nós agilizamos tudo na parte administrativa, mas o tempo de análise é definido pelo órgão público.
+            O prazo depende da demanda do órgão público competente (Prefeitura, Vigilância Sanitária, entre outros). Nós agilizamos tudo na parte administrativa, mas o tempo de análise é definido pelo órgão público.
           </p>
         </div>
 
@@ -76,7 +76,7 @@
         </div>
 
         <div>
-          <h3 class="font-semibold">O que acontece se eu perder o prazo do Auto de Infração</h3>
+          <h3 class="font-semibold">O que acontece se eu perder um prazo administrativo</h3>
           <p class="text-gray-700">
             Cada município tem regras específicas. Entre em contato o quanto antes para avaliarmos a situação.
           </p>

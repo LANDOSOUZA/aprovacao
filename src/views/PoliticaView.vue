@@ -33,7 +33,7 @@
 
       <h2 class="text-xl font-bold mt-6 mb-2">3. Compartilhamento de dados</h2>
       <p>
-        Os dados só são compartilhados quando necessário para o andamento do processo administrativo junto à Vigilância Sanitária municipal ou outros órgãos públicos relacionados.
+        Os dados só são compartilhados quando necessário para o andamento do processo administrativo junto à junto à Prefeitura e órgãos públicos competentes.
       </p>
 
       <h2 class="text-xl font-bold mt-6 mb-2">4. Armazenamento e segurança</h2>

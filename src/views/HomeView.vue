@@ -4,10 +4,10 @@
     <!-- Headline -->
     <section class="text-center space-y-4">
       <h1 class="text-3xl font-bold text-[var(--azul-escuro)]">
-        Serviços administrativos especializados para cadastros, regularizações e defesas administrativas junto à Vigilância Sanitária municipal.
+        Serviços administrativos especializados para cadastros, regularizações e defesas administrativas junto à Prefeitura e órgãos públicos municipais.
       </h1>
       <p class="text-lg text-gray-700">
-        Atendimento 100% on-line, com orientação clara, preço justo e foco total em resolver o problema do empreendedor.
+        Atendimento 100% on-line, com orientação clara, preço justo e foco em simplificar processos administrativos para o empreendedor.
       </p>
       <a
         href="https://wa.me/5519997070990"
@@ -22,13 +22,13 @@
     <Card>
       <h2 class="text-xl font-bold mb-4">O que fazemos</h2>
       <p>
-        A Aprovação Administrativa oferece suporte documental e técnico para empreendedores que precisam regularizar seus estabelecimentos ou responder a Autos de Infração emitidos pela Vigilância Sanitária municipal.
+        A Aprovação Administrativa oferece suporte documental e técnico para empreendedores que precisam regularizar seus estabelecimentos ou atender a exigências e notificações emitidas por órgãos públicos municipais.
       </p>
       <ul class="list-disc pl-6 mt-4 space-y-2">
-        <li>Cadastro e Regularização</li>
-        <li>Defesa Administrativa</li>
-        <li>Orientação documental</li>
-        <li>Acompanhamento de processos</li>
+        <li>Cadastro e regularização administrativa</li>
+        <li>Defesa administrativa</li>
+        <li>Orientação e organização documental</li>
+        <li>Acompanhamento de processos junto à Prefeitura</li>
       </ul>
     </Card>
 
@@ -39,15 +39,17 @@
         <div>
           <h3 class="font-semibold text-[var(--azul-escuro)]">📌 Cadastro e Regularização</h3>
           <p class="text-sm mt-2">
-            Organização de documentos, preenchimento de formulários, orientações e acompanhamento do processo até a aprovação.
+            Organização de documentos, preenchimento de formulários, orientações e acompanhamento do processo junto à Prefeitura e órgãos competentes.
           </p>
         </div>
         <div>
           <h3 class="font-semibold text-[var(--azul-escuro)]">📌 Defesa Administrativa</h3>
           <p class="text-sm mt-2">
-            Elaboração de defesa administrativa, análise do Auto, organização documental e protocolo dentro do prazo.
+            Elaboração de defesa administrativa, análise de notificações ou autos administrativos, organização documental e protocolo dentro do prazo.
             <br />
-            <span class="text-xs text-gray-600 italic">Atuação exclusivamente administrativa, sem caráter jurídico.</span>
+            <span class="text-xs text-gray-600 italic">
+              Atuação exclusivamente administrativa, sem caráter jurídico.
+            </span>
           </p>
         </div>
       </div>
@@ -69,9 +71,9 @@
     <!-- Chamada final -->
     <section class="text-center space-y-4">
       <h2 class="text-xl font-bold text-[var(--azul-escuro)]">
-        Precisa regularizar seu negócio ou responder a um Auto de Infração?
+        Precisa regularizar seu negócio ou atender a uma exigência administrativa?
       </h2>
-      <p>Entre em contato e receba orientação imediata.</p>
+      <p>Entre em contato e receba orientação administrativa clara e objetiva.</p>
       <a
         href="https://wa.me/5519997070990"
         target="_blank"
