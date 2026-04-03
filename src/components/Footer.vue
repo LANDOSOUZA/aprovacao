@@ -6,9 +6,12 @@
       </p>
 
       <p class="text-sm text-gray-700">
-        CNPJ: 66.052.603/0001-45<br />
-        Campinas – SP
+        CNPJ: 66.052.603/0001-45<br />        
       </p>
+
+      <p class="text-sm text-gray-700">
+        Campinas – SP/>        
+      </p>      
 
       <p class="text-gray-700 mt-2">
         Serviços de Apoio Administrativo
