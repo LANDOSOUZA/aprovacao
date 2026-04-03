@@ -1,18 +1,20 @@
 <template>
   <footer class="bg-gray-100 border-t border-gray-200 mt-16 py-10">
     <div class="max-w-6xl mx-auto px-4 text-center space-y-4">
-
       <p class="text-xl font-semibold text-[var(--azul-escuro)]">
         Aprovação Administrativa
-        CNPJ: 66.052.603/0001-45
-        Campinas - SP
       </p>
 
-      <p class="text-gray-700">
-        Serviços Administrativos Especializados
+      <p class="text-sm text-gray-700">
+        CNPJ: 66.052.603/0001-45<br />
+        Campinas – SP
       </p>
 
-      <p class="text-sm text-gray-600">
+      <p class="text-gray-700 mt-2">
+        Serviços de Apoio Administrativo
+      </p>
+
+      <p class="text-sm text-gray-600 mt-2">
         contato@aprovacaoadm.com.br
       </p>
 
@@ -28,7 +30,6 @@
       <p class="text-xs text-gray-500 mt-6">
         © {{ new Date().getFullYear() }} Aprovação Administrativa — Todos os direitos reservados.
       </p>
-
     </div>
   </footer>
 </template>
