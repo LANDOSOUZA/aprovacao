@@ -1,33 +1,12 @@
 module.exports = async function (context, req) {
-  if (req.method !== 'POST') {
-    context.res = {
-      status: 405,
-      body: 'Método não permitido'
-    }
-    return
-  }
-
-  const processId = req.query.processId
-  const token = req.query.token
-
-  if (!processId || !token) {
-    context.res = {
-      status: 400,
-      body: 'Token inválido ou processo inválido'
-    }
-    return
-  }
-
-  if (!req.rawBody || !req.rawBody.length) {
-    context.res = {
-      status: 400,
-      body: 'Nenhum arquivo recebido'
-    }
-    return
-  }
-
   context.res = {
     status: 200,
-    body: 'Arquivo recebido com sucesso'
+    headers: { 'Content-Type': 'application/json' },
+    body: {
+      method: req.method,
+      query: req.query,
+      headers: req.headers,
+      hasBody: !!req.rawBody
+    }
   }
 }
