@@ -3,12 +3,9 @@
     <h2>Envio de documentos</h2>
     <p>Anexe abaixo os documentos solicitados.</p>
 
-    <form
-      :action="uploadAction"
-      method="post"
-      enctype="multipart/form-data"
-    >
+    <form @submit.prevent="enviar">
       <input
+        ref="fileInput"
         type="file"
         name="file"
         multiple
@@ -17,39 +14,71 @@
 
       <br /><br />
 
-      <button type="submit">
-        Enviar documentos
+      <button type="submit" :disabled="enviando">
+        {{ enviando ? 'Enviando...' : 'Enviar documentos' }}
       </button>
     </form>
 
-    <p v-if="erro" style="color: red; margin-top: 1rem;">
+    <p v-if="msg" style="margin-top: 1rem; color: green;">
+      {{ msg }}
+    </p>
+
+    <p v-if="erro" style="margin-top: 1rem; color: red;">
       {{ erro }}
     </p>
   </div>
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const erro = ref(null)
 
-// vem da rota /enviar/:processo
+const fileInput = ref(null)
+const enviando = ref(false)
+const erro = ref('')
+const msg = ref('')
+
 const processId = route.params.processo
-
-// vem da query ?token=
 const token = route.query.token
 
-if (!processId || !token) {
-  erro.value = 'Link inválido. Verifique se o endereço está correto.'
+async function enviar() {
+  erro.value = ''
+  msg.value = ''
+
+  if (!processId || !token) {
+    erro.value = 'Link inválido. Verifique se o endereço está correto.'
+    return
+  }
+
+  const files = fileInput.value?.files
+  if (!files || files.length === 0) {
+    erro.value = 'Selecione pelo menos 1 arquivo.'
+    return
+  }
+
+  const fd = new FormData()
+  for (const f of files) fd.append('file', f)
+
+  enviando.value = true
+  try {
+    const url = `/api/upload?processId=${encodeURIComponent(processId)}&token=${encodeURIComponent(token)}`
+    const r = await fetch(url, { method: 'POST', body: fd })
+
+    const text = await r.text()
+    if (!r.ok) {
+      erro.value = text || `Erro HTTP ${r.status}`
+      return
+    }
+
+    msg.value = text || 'Enviado com sucesso.'
+  } catch (e) {
+    erro.value = 'Falha ao enviar.'
+  } finally {
+    enviando.value = false
+  }
 }
-
-const uploadAction = computed(() => {
-  if (!processId || !token) return '#'
-
-  return `/api/upload?processId=${encodeURIComponent(processId)}&token=${encodeURIComponent(token)}`
-})
 </script>
 
 <style scoped>
