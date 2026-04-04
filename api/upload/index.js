@@ -18,7 +18,7 @@ module.exports = async function (context, req) {
     return
   }
 
-  if (!req.body || !req.body.length) {
+  if (!req.rawBody || !req.rawBody.length) {
     context.res = {
       status: 400,
       body: 'Nenhum arquivo recebido'
