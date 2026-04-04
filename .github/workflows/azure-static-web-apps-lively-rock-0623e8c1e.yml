@@ -14,9 +14,6 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
-    permissions:
-      id-token: write
-      contents: read
 
     steps:
       - uses: actions/checkout@v3
@@ -31,9 +28,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
 
-          app_location: "/"          # frontend
-          api_location: "api"        # ✅ API (OBRIGATÓRIO)
-          output_location: "dist"    # build do Vite
+          app_location: "/"
+          output_location: "dist"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
