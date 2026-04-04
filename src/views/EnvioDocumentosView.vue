@@ -35,23 +35,20 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const erro = ref(null)
 
-// processId vem da rota: /enviar/:processo
+// vem da rota /enviar/:processo
 const processId = route.params.processo
 
-// token vem da query: ?token=...
+// vem da query ?token=
 const token = route.query.token
 
 if (!processId || !token) {
   erro.value = 'Link inválido. Verifique se o endereço está correto.'
 }
 
-// URL FINAL DA FUNCTION (SEM ?code=)
 const uploadAction = computed(() => {
   if (!processId || !token) return '#'
 
-return `/api/upload` +
-  `?processId=${encodeURIComponent(processId)}` +
-  `&token=${encodeURIComponent(token)}`
+  return `/api/upload?processId=${encodeURIComponent(processId)}&token=${encodeURIComponent(token)}`
 })
 </script>
 
