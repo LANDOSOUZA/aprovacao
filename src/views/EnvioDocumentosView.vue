@@ -49,9 +49,9 @@ if (!processId || !token) {
 const uploadAction = computed(() => {
   if (!processId || !token) return '#'
 
-  return `https://aprovacao-adm-upload-bjbpeuaaa7fyfydm.brazilsouth-01.azurewebsites.net/api/upload` +
-         `?processId=${encodeURIComponent(processId)}` +
-         `&token=${encodeURIComponent(token)}`
+return `/api/upload` +
+  `?processId=${encodeURIComponent(processId)}` +
+  `&token=${encodeURIComponent(token)}`
 })
 </script>
 
