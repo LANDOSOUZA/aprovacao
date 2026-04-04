@@ -6,7 +6,6 @@ import SobreView from '../views/SobreView.vue'
 import FAQView from '../views/FAQView.vue'
 import ContatoView from '../views/ContatoView.vue'
 
-// Páginas simples (vamos criar depois)
 import PoliticaView from '../views/PoliticaView.vue'
 import TermosView from '../views/TermosView.vue'
 
@@ -18,14 +17,21 @@ const routes = [
   { path: '/contato', component: ContatoView },
   { path: '/politica', component: PoliticaView },
   { path: '/termos', component: TermosView },
+
   {
-    path: '/obrigado', 
+    path: '/obrigado',
     name: 'Obrigado',
     component: () => import('../views/ObrigadoView.vue')
   },
+
+  {
+    path: '/enviar/:processo',
+    name: 'envio-documentos',
+    component: () => import('@/views/EnvioDocumentosView.vue')
+  }
 ]
 
 export default createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 })
