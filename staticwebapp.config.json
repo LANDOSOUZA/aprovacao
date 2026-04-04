@@ -1,0 +1,13 @@
+{
+  "routes": [
+    {
+      "route": "/api/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/*",
+      "redirect": "https://www.aprovacaoadm.com.br/{*path}",
+      "statusCode": 301
+    }
+  ]
+}
