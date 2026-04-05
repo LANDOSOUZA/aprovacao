@@ -2,21 +2,20 @@
   "routes": [
     {
       "route": "/admin/form*",
-      "allowedRoles": ["authenticated"]
+      "allowedRoles": ["authenticated"],
+      "rewrite": "/index.html"
     },
     {
       "route": "/admin",
-      "allowedRoles": ["anonymous"]
-    },
-    {
-      "route": "/api/*",
-      "allowedRoles": ["anonymous"]
+      "allowedRoles": ["anonymous"],
+      "rewrite": "/index.html"
     }
   ],
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
-      "/staticwebapp.config.json",
+      "/admin/form*",
+      "/.auth/*",
       "/api/*",
       "/assets/*",
       "/*.{css,js,png,jpg,jpeg,svg,ico}"
