@@ -1,27 +1,11 @@
 {
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
   "routes": [
     {
       "route": "/admin/form*",
-      "allowedRoles": ["authenticated"],
-      "rewrite": "/index.html"
-    },
-    {
-      "route": "/admin*",
-      "rewrite": "/index.html"
-    },
-    {
-      "route": "/enviar/*",
-      "rewrite": "/index.html"
-    },
-    {
-      "route": "/",
-      "rewrite": "/index.html"
+      "allowedRoles": ["authenticated"]
     }
-  ],
-  "responseOverrides": {
-    "401": {
-      "statusCode": 302,
-      "redirect": "/.auth/login/aad"
-    }
-  }
+  ]
 }
