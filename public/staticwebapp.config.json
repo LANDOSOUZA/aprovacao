@@ -4,24 +4,13 @@
     "exclude": [
       "/.auth/*",
       "/api/*",
-      "/*.css",
-      "/*.js",
-      "/*.png",
-      "/*.jpg",
-      "/*.svg",
-      "/*.ico"
+      "/*.{css,js,png,jpg,svg,ico}"
     ]
   },
   "routes": [
     {
-      "route": "/admin/form*",
+      "route": "/admin*",
       "allowedRoles": ["authenticated"]
     }
-  ],
-  "responseOverrides": {
-    "401": {
-      "statusCode": 302,
-      "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer"
-    }
-  }
+  ]
 }
