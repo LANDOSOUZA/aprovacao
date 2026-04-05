@@ -16,6 +16,7 @@
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": [
+      "/staticwebapp.config.json",
       "/api/*",
       "/assets/*",
       "/*.{css,js,png,jpg,jpeg,svg,ico}"
