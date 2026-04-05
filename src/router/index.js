@@ -32,12 +32,6 @@ const routes = [
 
   {
     path: '/admin',
-    name: 'admin',
-  component: () => import('@/views/AdminLinksView.vue')
-  },
-
-  {
-    path: '/admin',
     name: 'admin-gate',
     component: () => import('@/views/AdminGateView.vue')
   },
