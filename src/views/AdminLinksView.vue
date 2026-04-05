@@ -101,20 +101,20 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-
 
 const route = useRoute()
 
-OnMounted(() => {
+onMounted(() => {
   console.log('[ADMIN FORM] mounted')
   console.log('[ADMIN FORM] route:', route.fullPath)
 })
+
 const processId = ref('')
 const token = ref('')
 const clienteNome = ref('')
-const telefone = ref('') // só dígitos, ex 5511999999999
+const telefone = ref('')
 const email = ref('')
 
 const requestCustom = ref('')
