@@ -5,9 +5,18 @@
       "allowedRoles": ["anonymous"]
     },
     {
-      "route": "/*",
-      "redirect": "https://www.aprovacaoadm.com.br/{*path}",
-      "statusCode": 301
+      "route": "/admin/form",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/admin",
+      "allowedRoles": ["anonymous"]
     }
-  ]
+  ],
+  "responseOverrides": {
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/aad"
+    }
+  }
 }

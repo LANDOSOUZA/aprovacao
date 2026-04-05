@@ -28,6 +28,23 @@ const routes = [
     path: '/enviar/:processo',
     name: 'envio-documentos',
     component: () => import('@/views/EnvioDocumentosView.vue')
+  },
+
+  {
+    path: '/admin',
+    name: 'admin',
+  component: () => import('@/views/AdminLinksView.vue')
+  },
+
+  {
+    path: '/admin',
+    name: 'admin-gate',
+    component: () => import('@/views/AdminGateView.vue')
+  },
+  {
+    path: '/admin/form',
+    name: 'admin-form',
+    component: () => import('@/views/AdminLinksView.vue')
   }
 ]
 

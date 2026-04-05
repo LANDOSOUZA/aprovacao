@@ -81,6 +81,10 @@
       >
         Falar agora pelo WhatsApp
       </a>
+
+      <a href="/admin" class="text-sm text-gray-500 hover:text-gray-800">
+        Entrar como Admin
+      </a>
     </section>
 
   </div>
