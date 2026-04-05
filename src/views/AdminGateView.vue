@@ -7,9 +7,9 @@
         Esta área é destinada apenas à equipe interna.
       </p>
 
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-3">     
         <a
-          href="/admin/form"
+          href="/.auth/login/aad"
           class="px-4 py-2 rounded bg-gray-900 text-white hover:bg-gray-800"
         >
           Entrar como Admin
@@ -25,3 +25,21 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'AdminGateView',
+  async mounted() {
+    try {
+      const res = await fetch('/.auth/me')
+      const data = await res.json()
+
+      if (data?.clientPrincipal) {
+        this.$router.replace('/admin/form')
+      }
+    } catch {
+      // não logado, fica na tela
+    }
+  }
+}
+</script>
