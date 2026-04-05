@@ -1,8 +1,12 @@
 {
   "routes": [
     {
-      "route": "/admin*",
+      "route": "/admin/form*",
       "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/admin",
+      "allowedRoles": ["anonymous"]
     },
     {
       "route": "/api/*",
