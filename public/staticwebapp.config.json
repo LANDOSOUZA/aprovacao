@@ -6,21 +6,18 @@
       "rewrite": "/index.html"
     },
     {
-      "route": "/admin",
-      "allowedRoles": ["anonymous"],
+      "route": "/admin*",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/enviar/*",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/",
       "rewrite": "/index.html"
     }
   ],
-  "navigationFallback": {
-    "rewrite": "/index.html",
-    "exclude": [
-      "/admin/form*",
-      "/.auth/*",
-      "/api/*",
-      "/assets/*",
-      "/*.{css,js,png,jpg,jpeg,svg,ico}"
-    ]
-  },
   "responseOverrides": {
     "401": {
       "statusCode": 302,
