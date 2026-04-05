@@ -102,7 +102,15 @@
 
 <script setup>
 import { computed, ref } from 'vue'
+import { useRoute } from 'vue-router'
 
+
+const route = useRoute()
+
+OnMounted(() => {
+  console.log('[ADMIN FORM] mounted')
+  console.log('[ADMIN FORM] route:', route.fullPath)
+})
 const processId = ref('')
 const token = ref('')
 const clienteNome = ref('')

@@ -40,6 +40,7 @@ const routes = [
     name: 'admin-form',
     component: () => import('@/views/AdminLinksView.vue')
   }
+
 ]
 
 export default createRouter({
