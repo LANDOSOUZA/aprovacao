@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aprovacao-site-novo.azurestaticapps.net/sitemap.xml
