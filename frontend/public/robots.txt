@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Bloqueia áreas internas e sensíveis
+Disallow: /admin
+Disallow: /admin/
+Disallow: /admin/*
+Disallow: /enviar
+Disallow: /enviar/
+Disallow: /enviar/*
+
+# Evita indexação de URLs com parâmetros sensíveis
+Disallow: /*?token=
+Disallow: /*&token=
+
+# Permite indexação normal do restante do site
+Allow: /
+
+# Sitemap
+Sitemap: https://www.aprovacaoadm.com.br/sitemap.xml

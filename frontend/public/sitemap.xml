@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Páginas principais -->
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/servicos</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/sobre</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/faq</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/contato</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/politica</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/termos</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Páginas de fluxo -->
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/obrigado</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Rota dinâmica (não listamos valores específicos) -->
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/enviar/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Área administrativa -->
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/admin</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aprovacaoadm.com.br/admin/form</loc>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

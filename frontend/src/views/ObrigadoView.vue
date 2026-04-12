@@ -5,20 +5,20 @@
       Obrigado pelo contato!
     </h1>
 
-    <p class="text-lg text-gray-700 leading-relaxed">
-      Recebemos sua mensagem e nossa equipe já está analisando.
-      Em breve você receberá uma resposta no WhatsApp ou por e-mail.
+    <p class="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+      Sua mensagem foi recebida com sucesso. Nossa equipe já está analisando e
+      retornará em breve pelo WhatsApp ou e-mail.
     </p>
 
     <p class="text-gray-600">
-      Nosso atendimento é de segunda a sexta-feira, das 08h às 18h.
+      Atendimento de segunda a sexta-feira, das 08h às 18h.
     </p>
 
-    <div class="space-y-4">
+    <div class="space-y-4 pt-4">
       <a
         href="https://wa.me/5519997070990"
         target="_blank"
-        class="inline-block bg-[var(--verde-whatsapp)] text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"
+        class="inline-flex items-center gap-2 bg-[var(--verde-whatsapp)] text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"
       >
         Falar pelo WhatsApp
       </a>

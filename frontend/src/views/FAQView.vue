@@ -6,81 +6,100 @@
       Perguntas Frequentes (FAQ)
     </h1>
 
-    <!-- FAQ -->
     <Card>
       <h2 class="text-xl font-bold mb-4">Dúvidas comuns</h2>
 
-      <div class="space-y-6">
+      <div class="space-y-4">
 
-        <div>
-          <h3 class="font-semibold">O atendimento é realmente 100% on-line</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            O atendimento é realmente 100% on-line?
+          </summary>
+          <p class="text-gray-700 mt-2">
             Sim. Todo o processo — envio de documentos, orientações, elaboração de defesas e acompanhamento — é realizado de forma totalmente digital.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">Como envio meus documentos</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Como envio meus documentos?
+          </summary>
+          <p class="text-gray-700 mt-2">
             Você pode enviar por WhatsApp ou e-mail. Assim que iniciarmos o atendimento, informamos exatamente quais documentos são necessários.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">Vocês fazem defesa jurídica</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Vocês fazem defesa jurídica?
+          </summary>
+          <p class="text-gray-700 mt-2">
             Não. Nossa atuação é exclusivamente administrativa, voltada à organização documental e à elaboração de defesas administrativas, sem prestação de serviços jurídicos.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">Quanto tempo leva para regularizar meu cadastro</h3>
-          <p class="text-gray-700">
-            O prazo depende da demanda do órgão público competente (Prefeitura, Vigilância Sanitária, entre outros). Nós agilizamos tudo na parte administrativa, mas o tempo de análise é definido pelo órgão público.
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Quanto tempo leva para regularizar meu cadastro?
+          </summary>
+          <p class="text-gray-700 mt-2">
+            O prazo depende da demanda do órgão público competente. Nós agilizamos tudo na parte administrativa, mas o tempo de análise é definido pelo órgão público.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">Preciso ter CNPJ para contratar</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Preciso ter CNPJ para contratar?
+          </summary>
+          <p class="text-gray-700 mt-2">
             Não. Atendemos tanto pessoas físicas quanto jurídicas.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">Como funciona o pagamento</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Como funciona o pagamento?
+          </summary>
+          <p class="text-gray-700 mt-2">
             O pagamento é feito via Pix. O valor é informado antes do início do serviço, sem surpresas.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">Vocês atendem apenas Campinas</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Vocês atendem apenas Campinas?
+          </summary>
+          <p class="text-gray-700 mt-2">
             Não. Como o atendimento é on-line, podemos auxiliar empreendedores de qualquer município.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">Vocês acompanham o processo até o final</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Vocês acompanham o processo até o final?
+          </summary>
+          <p class="text-gray-700 mt-2">
             Sim. Após o envio da documentação ou defesa administrativa, acompanhamos o andamento e mantemos você informado.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">Vocês garantem aprovação</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Vocês garantem aprovação?
+          </summary>
+          <p class="text-gray-700 mt-2">
             Não. A decisão final é sempre da autoridade pública. O que garantimos é qualidade técnica, organização documental e cumprimento de prazos.
           </p>
-        </div>
+        </details>
 
-        <div>
-          <h3 class="font-semibold">O que acontece se eu perder um prazo administrativo</h3>
-          <p class="text-gray-700">
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            O que acontece se eu perder um prazo administrativo?
+          </summary>
+          <p class="text-gray-700 mt-2">
             Cada município tem regras específicas. Entre em contato o quanto antes para avaliarmos a situação.
           </p>
-        </div>
+        </details>
 
       </div>
     </Card>

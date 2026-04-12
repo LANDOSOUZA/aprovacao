@@ -1,0 +1,128 @@
+winget install --id Microsoft.AzureCLI
+
+az version
+
+az login
+
+az account show
+
+1) CRIAR O FRONT DOOR (via PowerShell)
+
+Install-Module Az -Force
+Install-Module Az.Cdn -Force
+Connect-AzAccount
+
+$resourceGroup = "aprovacao-rg"
+$location = "centralus"
+$fdName = "aprovacaoadm"
+$swaHost = "witty-mud-0cfe3a510.1.azurestaticapps.net"
+
+Register-AzResourceProvider -ProviderNamespace Microsoft.Cdn
+
+Get-AzResourceProvider -ProviderNamespace Microsoft.Cdn
+
+
+
+New-AzFrontDoorCdnProfile `
+  -Name $fdName `
+  -ResourceGroupName $resourceGroup `
+  -SkuName Standard_AzureFrontDoor `
+  -Location global
+
+New-AzFrontDoorCdnEndpoint `
+  -EndpointName $fdName `
+  -ProfileName $fdName `
+  -ResourceGroupName $resourceGroup `
+  -Location "global"
+
+**********************************************************************************************************************************
+ Get-Help New-AzFrontDoorCdnOriginGroup -Full //pesquisa dos parâmetros exigidos para os comandos, se necessário
+
+
+*************************************************************************************************************************************
+
+$originGroupJson = @"
+{
+  "properties": {
+    "loadBalancingSettings": {
+      "sampleSize": 4,
+      "successfulSamplesRequired": 3,
+      "additionalLatencyInMilliseconds": 0
+    },
+    "healthProbeSettings": {
+      "probePath": "/",
+      "probeRequestType": "GET",
+      "probeProtocol": "Https",
+      "probeIntervalInSeconds": 120
+    }
+  }
+}
+"@
+
+As lnhas acima criam apenas classe no Powershell para que ele aceite os comandos
+*************************************************************************************************************************************
+
+New-AzFrontDoorCdnOrigin `
+  -OriginName "swa-origin" `
+  -OriginGroupName "swa-backend" `
+  -ProfileName $fdName `
+  -ResourceGroupName $resourceGroup `
+  -HostName $swaHost `
+  -HttpPort 80 `
+  -HttpsPort 443
+
+************************************************************************************************************************************
+$subscriptionId = (Get-AzContext).Subscription.Id
+$subscriptionId
+27eb6c44-43e8-4782-83a0-4057acc6c767
+$resourceGroup
+aprovacao-rg
+$fdName
+aprovacaoadm
+
+Criar o JSON da rota principal (/).
+Cole isso no PowerShell:
+
+$routeJson = @"
+{
+  "properties": {
+    "originGroup": {
+      "id": "/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Cdn/profiles/$fdName/originGroups/swa-backend"
+    },
+    "patternsToMatch": [
+      "/"
+    ],
+    "supportedProtocols": [
+      "Http",
+      "Https"
+    ],
+    "httpsRedirect": "Enabled",
+    "linkToDefaultDomain": "Enabled",
+    "forwardingProtocol": "MatchRequest"
+  }
+}
+"@
+
+************************************************************************************************************************************
+
+New-AzFrontDoorCdnRoute `
+  -Name "site-route" `
+  -EndpointName $fdName `
+  -ProfileName $fdName `
+  -ResourceGroupName $resourceGroup `
+  -JsonString $routeJson
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
