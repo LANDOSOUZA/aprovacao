@@ -8,11 +8,37 @@ export async function criarProcesso(dados) {
   }).then(r => r.json());
 }
 
-export async function uploadDocumento(formData) {
-  return fetch(`${API_URL}/uploadDocumento`, {
-    method: "POST",
-    body: formData
-  }).then(r => r.json());
+export function uploadDocumento(formData, onProgress) {
+  // Usa XMLHttpRequest (em vez de fetch) porque fetch não expõe
+  // progresso de upload — o callback onProgress precisa disso.
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", `${API_URL}/uploadDocumento`);
+
+    if (onProgress) {
+      xhr.upload.addEventListener("progress", onProgress);
+    }
+
+    xhr.onload = () => {
+      let data = {};
+      try {
+        data = JSON.parse(xhr.responseText || "{}");
+      } catch {
+        resolve({ error: "Resposta inválida do servidor." });
+        return;
+      }
+
+      if (xhr.status >= 200 && xhr.status < 300) {
+        resolve(data);
+      } else {
+        resolve({ error: data.error || `Erro ${xhr.status} ao enviar documentos.` });
+      }
+    };
+
+    xhr.onerror = () => reject(new Error("Erro de rede ao enviar documentos."));
+
+    xhr.send(formData);
+  });
 }
 
 export async function listarProcessos() {

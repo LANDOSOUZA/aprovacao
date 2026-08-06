@@ -240,3 +240,145 @@
     <p v-if="toast" class="text-sm text-green-700">{{ toast }}</p>
   </div>
 </template>
+
+<script setup>
+import { ref, computed, onMounted } from 'vue'
+import { listarDocumentos, getDocumento, deleteDocumento } from '@/services/api'
+
+// Dados do processo
+const processId = ref('')
+const token = ref('')
+const clienteNome = ref('')
+const telefone = ref('')
+const email = ref('')
+
+// Checklists
+const requestDocs = ref([
+  { id: 'rg', label: 'RG ou CNH', checked: true },
+  { id: 'cpf', label: 'CPF', checked: true },
+  { id: 'comprovante', label: 'Comprovante de residência', checked: true },
+  { id: 'procuracao', label: 'Procuração assinada', checked: false },
+  { id: 'notificacao', label: 'Auto de Infração / Notificação recebida', checked: false }
+])
+
+const sendDocs = ref([
+  { id: 'proposta', label: 'Proposta de honorários', checked: true },
+  { id: 'contrato', label: 'Contrato de prestação de serviço', checked: true },
+  { id: 'procuracao-modelo', label: 'Modelo de procuração para assinatura', checked: false }
+])
+
+const requestCustom = ref('')
+const sendCustom = ref('')
+
+function addCustom(type) {
+  const list = type === 'request' ? requestDocs : sendDocs
+  const input = type === 'request' ? requestCustom : sendCustom
+  const label = input.value.trim()
+  if (!label) return
+
+  list.value.push({ id: `custom-${Date.now()}`, label, checked: true })
+  input.value = ''
+}
+
+// Link do cliente
+const clientLinkOk = computed(() => Boolean(processId.value && token.value))
+
+const clientLink = computed(() => {
+  if (!clientLinkOk.value) return ''
+  const base = `${window.location.origin}/enviar/${encodeURIComponent(processId.value)}`
+  return `${base}?token=${encodeURIComponent(token.value)}`
+})
+
+// Mensagem pronta
+const message = computed(() => {
+  const saudacao = clienteNome.value ? `Olá, ${clienteNome.value}!` : 'Olá!'
+  const itens = requestDocs.value
+    .filter(d => d.checked)
+    .map(d => `- ${d.label}`)
+    .join('\n')
+
+  return [
+    saudacao,
+    '',
+    `Para darmos continuidade ao processo ${processId.value || '[processo]'}, envie os documentos abaixo pelo link:`,
+    clientLink.value || '[preencha processo e token para gerar o link]',
+    '',
+    'Documentos necessários:',
+    itens || '- (nenhum item selecionado)',
+    '',
+    'Qualquer dúvida, estamos à disposição.'
+  ].join('\n')
+})
+
+const whatsHref = computed(() => {
+  const numero = telefone.value.replace(/\D/g, '')
+  return `https://wa.me/${numero}?text=${encodeURIComponent(message.value)}`
+})
+
+const mailHref = computed(() => {
+  const assunto = encodeURIComponent(`Documentos – Processo ${processId.value || ''}`)
+  const corpo = encodeURIComponent(message.value)
+  return `mailto:${email.value}?subject=${assunto}&body=${corpo}`
+})
+
+// Toast
+const toast = ref('')
+function showToast(texto) {
+  toast.value = texto
+  setTimeout(() => { toast.value = '' }, 2500)
+}
+
+async function copy(text) {
+  try {
+    await navigator.clipboard.writeText(text || '')
+    showToast('Copiado para a área de transferência!')
+  } catch {
+    showToast('Não foi possível copiar.')
+  }
+}
+
+// Documentos enviados
+const documentos = ref([])
+
+async function carregarDocumentos() {
+  try {
+    const resposta = await listarDocumentos()
+    documentos.value = Array.isArray(resposta) ? resposta : (resposta?.documentos ?? [])
+  } catch {
+    documentos.value = []
+  }
+}
+
+onMounted(carregarDocumentos)
+
+async function baixarDocumento(nome) {
+  try {
+    const res = await getDocumento(nome)
+    if (!res.ok) throw new Error('Falha ao baixar')
+
+    const blob = await res.blob()
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = nome
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    URL.revokeObjectURL(url)
+  } catch {
+    showToast('Erro ao baixar o documento.')
+  }
+}
+
+async function excluirDocumento(nome) {
+  if (!confirm(`Excluir o documento "${nome}"?`)) return
+
+  try {
+    await deleteDocumento(nome)
+    documentos.value = documentos.value.filter(d => d.nome !== nome)
+    showToast('Documento excluído.')
+  } catch {
+    showToast('Erro ao excluir o documento.')
+  }
+}
+</script>

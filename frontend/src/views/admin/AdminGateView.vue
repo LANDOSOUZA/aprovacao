@@ -12,12 +12,13 @@
       </p>
 
       <div class="flex flex-col gap-3 pt-2">
-        <a
-          href="/.auth/login/aad"
-          class="px-4 py-2 rounded bg-gray-900 text-white font-semibold hover:bg-black transition"
+        <button
+          @click="entrar"
+          :disabled="loading"
+          class="px-4 py-2 rounded bg-gray-900 text-white font-semibold hover:bg-black transition disabled:opacity-50"
         >
           Entrar como Admin
-        </a>
+        </button>
 
         <router-link
           to="/"
@@ -31,34 +32,57 @@
         Verificando sessão...
       </p>
 
+      <p v-if="erro" class="text-sm text-red-600">
+        {{ erro }}
+      </p>
+
     </div>
   </div>
 </template>
 
 <script>
+import { getUser, signIn, handleSignInCallback } from '@/services/cognitoAuth'
+
 export default {
   name: 'AdminGateView',
 
   data() {
     return {
-      loading: true
+      loading: true,
+      erro: null
     }
   },
 
   async mounted() {
     try {
-      const res = await fetch('/.auth/me')
-      const data = await res.json()
-
-      if (data?.clientPrincipal) {
+      const callbackUser = await handleSignInCallback()
+      if (callbackUser) {
         this.$router.replace('/admin/form')
         return
       }
-    } catch {
-      // não logado, permanece na tela
+
+      const user = await getUser()
+      if (user) {
+        this.$router.replace('/admin/form')
+        return
+      }
+    } catch (e) {
+      this.erro = 'Não foi possível verificar sua sessão. Tente novamente.'
     }
 
     this.loading = false
+  },
+
+  methods: {
+    async entrar() {
+      this.loading = true
+      try {
+        await signIn()
+      } catch (e) {
+        this.erro = 'Não foi possível iniciar o login. Tente novamente.'
+        this.loading = false
+      }
+    }
   }
 }
 </script>

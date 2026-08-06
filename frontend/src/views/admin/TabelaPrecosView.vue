@@ -49,6 +49,7 @@ const tabela = [
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 5px;
+  color: var(--azul-escuro);
 }
 
 .subtitle {
@@ -71,7 +72,7 @@ const tabela = [
 .precos-table th {
   text-align: left;
   padding: 12px;
-  background: #f5f5f5;
+  background: var(--cinza-claro);
   font-weight: 600;
 }
 

@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { getUser } from '@/services/cognitoAuth'
 
 import HomeView from '../views/HomeView.vue'
 import ServicosView from '../views/ServicosView.vue'
@@ -141,12 +142,13 @@ const router = createRouter({
 // 🔒 Proteção da rota administrativa
 // ------------------------------------------------------
 router.beforeEach(async (to, from, next) => {
-  if (to.path.startsWith('/admin/form')) {
-    try {
-      const res = await fetch('/.auth/me')
-      const data = await res.json()
+  // Protege TODAS as rotas administrativas, exceto a própria tela de login (/admin)
+  const isAdminRoute = to.path.startsWith('/admin') && to.path !== '/admin'
 
-      if (!data?.clientPrincipal) {
+  if (isAdminRoute) {
+    try {
+      const user = await getUser()
+      if (!user) {
         return next('/admin')
       }
     } catch {
