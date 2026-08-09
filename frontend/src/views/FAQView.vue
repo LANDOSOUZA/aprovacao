@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-5xl mx-auto space-y-10 py-10 px-4">
+  <div class="max-w-5xl mx-auto space-y-8 py-10 px-4">
 
     <!-- Título -->
     <h1 class="text-3xl font-bold text-[var(--azul-escuro)] text-center">
@@ -7,7 +7,12 @@
     </h1>
 
     <Card>
-      <h2 class="text-xl font-bold mb-4">Dúvidas comuns</h2>
+      <div class="flex items-center gap-2 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--azul-escuro)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h2 class="text-xl font-bold">Dúvidas comuns</h2>
+      </div>
 
       <div class="space-y-4">
 
@@ -98,6 +103,15 @@
           </summary>
           <p class="text-gray-700 mt-2">
             Cada município tem regras específicas. Entre em contato o quanto antes para avaliarmos a situação.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
+            Quem assina a planta técnica de LTA?
+          </summary>
+          <p class="text-gray-700 mt-2">
+            A planta é elaborada por nossa equipe e revisada e assinada por um engenheiro parceiro, que assume a responsabilidade técnica (ART) perante o órgão competente.
           </p>
         </details>
 

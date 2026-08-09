@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-3xl mx-auto px-4 py-20 text-center space-y-8">
+  <div class="max-w-3xl mx-auto px-4 py-16 text-center space-y-6">
 
     <h1 class="text-3xl font-bold text-[var(--azul-escuro)]">
       Obrigado pelo contato!
@@ -15,7 +15,7 @@
     </p>
 
     <div class="space-y-4 pt-4">
-      <a
+      
         href="https://wa.me/5519997070990"
         target="_blank"
         class="inline-flex items-center gap-2 bg-[var(--verde-whatsapp)] text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"

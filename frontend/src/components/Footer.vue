@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-gray-100 border-t border-gray-200 mt-16 py-10">
-    <div class="max-w-6xl mx-auto px-4 text-center space-y-4">
+  <footer class="bg-gray-100 border-t border-gray-200 mt-10 py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center space-y-3">
 
       <!-- Nome da empresa -->
       <p class="text-xl font-semibold text-[var(--azul-escuro)]">
@@ -23,7 +23,7 @@
 
       <!-- E-mail -->
       <p class="text-sm text-gray-600 mt-2">
-        <a
+        
           href="mailto:contato@aprovacaoadm.com.br"
           class="hover:underline"
           aria-label="Enviar e-mail para contato@aprovacaoadm.com.br"
@@ -48,6 +48,14 @@
           aria-label="Termos de Uso"
         >
           Termos de Uso
+        </router-link>
+
+        <router-link
+          to="/admin"
+          class="text-gray-400 hover:text-gray-600 transition"
+          aria-label="Acesso administrativo"
+        >
+          Admin
         </router-link>
       </div>
 

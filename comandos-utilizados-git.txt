@@ -1,0 +1,25 @@
+cd C:\
+git clone https://github.com/LANDOSOUZA/aprovacao.git aprovacao-repo
+cd aprovacao-repo
+
+--------------------------------------------------------
+// Depois de clonado, pra manter atualizado nas próximas vezes que usar o notebook, basta:
+
+cd C:\aprovacao-repo
+git pull origin main
+
+-------------------------------------------------------
+
+git config --global user.email "lando-souza@hotmail.com"
+git config --global user.name "LANDOSOUZA"
+git remote -v 
+
+------------------------------------------------------
+
+cd C:\aprovacao-repo
+git add .
+git commit -m "Ajustes de design: Header (remove link Admin), Footer (adiciona Admin discreto e link mobile), espaçamento e ícones nas páginas, novo serviço de LTA"
+git push origin main
+
+-----------------------------------------------------
+gist status

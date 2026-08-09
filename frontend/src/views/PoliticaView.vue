@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-5xl mx-auto space-y-10 py-10 px-4">
+  <div class="max-w-5xl mx-auto space-y-8 py-10 px-4">
 
     <h1 class="text-3xl font-bold text-[var(--azul-escuro)] text-center">
       Política de Privacidade

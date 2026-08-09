@@ -39,14 +39,6 @@
         <router-link to="/sobre" class="transition hover:text-[var(--azul-medio)]">Sobre</router-link>
         <router-link to="/faq" class="transition hover:text-[var(--azul-medio)]">FAQ</router-link>
         <router-link to="/contato" class="transition hover:text-[var(--azul-medio)]">Contato</router-link>
-
-        <!-- Admin (discreto) -->
-        <router-link
-          to="/admin"
-          class="text-sm text-gray-500 transition hover:text-[var(--azul-medio)]"
-        >
-          Admin
-        </router-link>
       </nav>
     </div>
 
@@ -61,15 +53,6 @@
       <router-link @click="menuAberto = false" to="/sobre" class="block transition hover:text-[var(--azul-medio)]">Sobre</router-link>
       <router-link @click="menuAberto = false" to="/faq" class="block transition hover:text-[var(--azul-medio)]">FAQ</router-link>
       <router-link @click="menuAberto = false" to="/contato" class="block transition hover:text-[var(--azul-medio)]">Contato</router-link>
-
-      <!-- Admin mobile -->
-      <router-link
-        @click="menuAberto = false"
-        to="/admin"
-        class="block text-sm text-gray-500 hover:text-[var(--azul-medio)]"
-      >
-        Admin
-      </router-link>
     </nav>
   </header>
 </template>
