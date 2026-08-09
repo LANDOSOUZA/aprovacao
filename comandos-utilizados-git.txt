@@ -23,3 +23,8 @@ git push origin main
 
 -----------------------------------------------------
 gist status
+
+git commit -m "Ajustes de design: Header (remove link Admin), Footer (adiciona Admin discreto e link mobile), espaçamento e ícones nas páginas, novo serviço de LTA"
+
+git commit -m "Ajustes de design: Header (remove link Admin), Footer (adiciona Admin discreto e link mobile), espaçamento e ícones nas páginas, novo serviço de LTA"
+git push origin main
