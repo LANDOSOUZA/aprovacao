@@ -24,6 +24,7 @@
       <!-- E-mail -->
       <p class="text-sm text-gray-600 mt-2">
         
+        <a
           href="mailto:contato@aprovacaoadm.com.br"
           class="hover:underline"
           aria-label="Enviar e-mail para contato@aprovacaoadm.com.br"

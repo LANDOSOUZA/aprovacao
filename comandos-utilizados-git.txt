@@ -28,3 +28,13 @@ git commit -m "Ajustes de design: Header (remove link Admin), Footer (adiciona A
 
 git commit -m "Ajustes de design: Header (remove link Admin), Footer (adiciona Admin discreto e link mobile), espaçamento e ícones nas páginas, novo serviço de LTA"
 git push origin main
+
+----------------------------------------------------
+echo comandos-utilizados-git.txt >> .gitignore
+
+cd C:\aprovacao-repo\frontend
+npm install
+npm run build
+
+type frontend\src\components\Footer.vue | more +28
+type src\components\Footer.vue

@@ -38,7 +38,7 @@
       </ul>
 
       <div class="mt-6">
-        
+        <a
           href="https://wa.me/5519997070990"
           target="_blank"
           class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"
@@ -85,6 +85,7 @@
       </p>
 
       <div class="mt-6">
+        <a
         
           href="https://wa.me/5519997070990"
           target="_blank"
@@ -125,7 +126,7 @@
       </ul>
 
       <div class="mt-6">
-        
+        <a        
           href="https://wa.me/5519997070990"
           target="_blank"
           class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition"

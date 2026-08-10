@@ -18,7 +18,7 @@
         Atendimento rápido e direto. Envie dúvidas, documentos ou solicitações administrativas.
       </p>
 
-      
+      <a
         href="https://wa.me/5519997070990"
         target="_blank"
         aria-label="Falar com atendimento pelo WhatsApp"
@@ -41,7 +41,7 @@
         Para envio de documentos e solicitações formais:
       </p>
 
-      
+      <a
         href="mailto:contato@aprovacaoadm.com.br"
         aria-label="Enviar e-mail para contato@aprovacaoadm.com.br"
         class="font-semibold text-[var(--azul-escuro)] hover:underline"
