@@ -38,6 +38,16 @@ const routes = [
   },
 
   {
+    path: '/servicos/lta',
+    component: () => import('../views/LTAView.vue'),
+    meta: {
+      canonical: 'https://www.aprovacaoadm.com.br/servicos/lta',
+      title: 'Planta Técnica para LTA - Aprovação Administrativa',
+      description: 'Elaboração de plantas técnicas para Laudo Técnico de Avaliação (LTA), com revisão e ART de engenheiro parceiro.'
+    }
+  },
+
+  {
     path: '/sobre',
     component: SobreView,
     meta: {

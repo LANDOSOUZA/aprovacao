@@ -125,6 +125,12 @@
         <li>Atendimento integrado com os demais serviços administrativos</li>
       </ul>
 
+      <div class="mt-4">
+        <router-link to="/servicos/lta" class="text-sm font-medium text-[var(--azul-medio)] hover:underline">
+          Ver detalhes completos →
+        </router-link>
+      </div>
+
       <div class="mt-6">
         <a        
           href="https://wa.me/5519997070990"

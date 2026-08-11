@@ -18,8 +18,13 @@
         <tbody>
           <tr v-for="item in tabela" :key="item.servico">
             <td>{{ item.servico }}</td>
-            <td>R$ {{ item.min }}</td>
-            <td>R$ {{ item.max }}</td>
+            <td v-if="item.sobConsulta" colspan="2" class="sob-consulta">
+              {{ item.sobConsulta }}
+            </td>
+            <template v-else>
+              <td>R$ {{ item.min }}</td>
+              <td>R$ {{ item.max }}</td>
+            </template>
           </tr>
         </tbody>
       </table>
@@ -35,6 +40,7 @@ const tabela = [
   { servico: "Requerimentos Diversos", min: 50, max: 250 },
   { servico: "Defesa de Auto de Infração", min: 300, max: 1200 },
   { servico: "Defesa de AIP", min: 500, max: 1800 },
+  { servico: "Planta Técnica para LTA", sobConsulta: "Sob consulta, conforme complexidade do projeto" },
 ];
 </script>
 
@@ -83,5 +89,10 @@ const tabela = [
 
 .precos-table tr:hover {
   background: #fafafa;
+}
+
+.sob-consulta {
+  color: var(--azul-medio, #2563eb);
+  font-style: italic;
 }
 </style>

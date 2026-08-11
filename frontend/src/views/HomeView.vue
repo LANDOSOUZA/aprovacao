@@ -76,7 +76,6 @@
             </span>
           </p>
         </div>
-
         <div>
           <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[var(--azul-escuro)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -87,8 +86,10 @@
           <p class="text-sm mt-2 text-gray-700 leading-relaxed">
             Elaboração de plantas técnicas para Laudo Técnico de Avaliação (LTA), com revisão e responsabilidade técnica de engenheiro parceiro (ART).
           </p>
+          <router-link to="/servicos/lta" class="text-sm font-medium text-[var(--azul-medio)] hover:underline mt-2 inline-block">
+            Saiba mais →
+          </router-link>
         </div>
-
       </div>
     </Card>
 
