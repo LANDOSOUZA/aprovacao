@@ -18,7 +18,7 @@
 
         <details class="group border-b pb-4">
           <summary class="font-semibold cursor-pointer group-open:text-[var(--azul-escuro)]">
-            O atendimento é realmente 100% on-line?
+            O atendimento é realmente 100% online?
           </summary>
           <p class="text-gray-700 mt-2">
             Sim. Todo o processo — envio de documentos, orientações, elaboração de defesas e acompanhamento — é realizado de forma totalmente digital.
@@ -75,7 +75,7 @@
             Vocês atendem apenas Campinas?
           </summary>
           <p class="text-gray-700 mt-2">
-            Não. Como o atendimento é on-line, podemos auxiliar empreendedores de qualquer município.
+            Não. Como o atendimento é online, podemos auxiliar empreendedores de qualquer município.
           </p>
         </details>
 

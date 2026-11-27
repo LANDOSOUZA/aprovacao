@@ -62,7 +62,7 @@
       <p class="text-gray-700 leading-relaxed">
         Segunda a sexta-feira<br />
         08h às 18h<br />
-        Atendimento 100% on-line e remoto
+        Atendimento 100% online e remoto
       </p>
     </Card>
 

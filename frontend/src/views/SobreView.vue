@@ -37,7 +37,7 @@
       </div>
       <p class="text-gray-700 leading-relaxed">
         Simplificar a burocracia administrativa por meio de serviços acessíveis,
-        eficientes e totalmente on-line, permitindo que o empreendedor concentre sua
+        eficientes e totalmente online, permitindo que o empreendedor concentre sua
         energia no crescimento do negócio.
       </p>
     </Card>
@@ -80,7 +80,7 @@
       </ul>
 
       <p class="mt-4 text-gray-700 leading-relaxed">
-        Todo o atendimento é realizado de forma 100% on-line, garantindo agilidade,
+        Todo o atendimento é realizado de forma 100% online, garantindo agilidade,
         comodidade e acompanhamento contínuo.
       </p>
 

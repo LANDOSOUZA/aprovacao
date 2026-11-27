@@ -8,7 +8,7 @@
       </h1>
 
       <p class="text-lg text-gray-700 leading-relaxed">
-        Atendimento 100% on-line, com orientação clara, preço justo e foco em simplificar processos administrativos para o empreendedor.
+        Atendimento 100% online, com orientação clara, preço justo e foco em simplificar processos administrativos para o empreendedor.
       </p>
       
 
@@ -107,7 +107,7 @@
         <li>Respostas rápidas</li>
         <li>Preço acessível</li>
         <li>Segurança e sigilo documental</li>
-        <li>Atendimento 100% on-line</li>
+        <li>Atendimento 100% online</li>
       </ul>
     </Card>
 

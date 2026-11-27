@@ -34,7 +34,7 @@
         <li>Evita erros que atrasam o processo</li>
         <li>Reduz risco de autuações</li>
         <li>Atendimento claro e acessível</li>
-        <li>Processo 100% on-line</li>
+        <li>Processo 100% online</li>
       </ul>
 
       <div class="mt-6">
