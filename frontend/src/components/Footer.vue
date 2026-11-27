@@ -45,6 +45,19 @@
         </a>
       </p>
 
+      <!-- Instagram -->
+      <p class="text-sm text-gray-600">
+        <a
+          href="https://www.instagram.com/aprovacaoadm/"
+          target="_blank"
+          rel="noopener"
+          class="hover:underline"
+          aria-label="Instagram da Aprovação Administrativa"
+        >
+          Instagram: @aprovacaoadm
+        </a>
+      </p>
+
       <!-- Horário -->
       <p class="text-sm text-gray-600">
         Segunda a sexta, das 8h às 17h
