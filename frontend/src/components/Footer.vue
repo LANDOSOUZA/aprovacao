@@ -23,7 +23,6 @@
 
       <!-- E-mail -->
       <p class="text-sm text-gray-600 mt-2">
-        
         <a
           href="mailto:contato@aprovacaoadm.com.br"
           class="hover:underline"
@@ -49,14 +48,6 @@
           aria-label="Termos de Uso"
         >
           Termos de Uso
-        </router-link>
-
-        <router-link
-          to="/admin"
-          class="text-gray-400 hover:text-gray-600 transition"
-          aria-label="Acesso administrativo"
-        >
-          Admin
         </router-link>
       </div>
 
