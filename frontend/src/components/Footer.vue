@@ -21,8 +21,21 @@
         Serviços de Apoio Administrativo
       </p>
 
-      <!-- E-mail -->
+      <!-- WhatsApp -->
       <p class="text-sm text-gray-600 mt-2">
+        <a
+          href="https://wa.me/5519997070990"
+          target="_blank"
+          rel="noopener"
+          class="hover:underline"
+          aria-label="Conversar pelo WhatsApp: (19) 99707-0990"
+        >
+          WhatsApp: (19) 99707-0990
+        </a>
+      </p>
+
+      <!-- E-mail -->
+      <p class="text-sm text-gray-600">
         <a
           href="mailto:contato@aprovacaoadm.com.br"
           class="hover:underline"
@@ -30,6 +43,11 @@
         >
           contato@aprovacaoadm.com.br
         </a>
+      </p>
+
+      <!-- Horário -->
+      <p class="text-sm text-gray-600">
+        Segunda a sexta, das 8h às 17h
       </p>
 
       <!-- Links -->
